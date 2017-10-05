@@ -163,3 +163,81 @@ h1{
   }
   
   
+/* CSS för produktdetaljer/produktsida */
+
+.pageTitle {
+
+  	color: Black;
+
+ 	margin-left: 50px;
+
+	margin-right: 50px;
+
+	padding: 10px;
+	padding-top: 0px;
+
+	background-color:
+	LightGray;
+
+}
+
+.pageTitle h2 {
+
+	text-shadow: 1px 1px Gray;
+
+}
+
+.pageTitle small {
+
+	color: DimGray;
+
+}
+
+
+.mainContent {
+
+	padding-left: 25px;
+
+}
+
+
+.mainContent img {
+
+	border: 1px Solid Gray;
+
+	margin-left: 25px;
+
+}
+
+
+.prize {
+
+	margin-left: 50px;
+
+	width: 200px;
+
+	background-color: LightGray;
+
+}
+
+
+.prize th {
+
+	text-shadow: 1px 1px Gray;
+
+}
+
+
+.info {
+
+	width: 300px;
+
+}
+
+
+.info tr {
+
+	background-color: LightGray;
+
+}
+
