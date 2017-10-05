@@ -1,0 +1,165 @@
+.topside{
+	height:150px;
+	background-color:black;
+	width:100%;
+}
+.topsideBox{
+	height:150px;
+	width:25%;
+	float:left;
+	
+}
+.content{
+	height:500px;
+}
+#searchBox{
+	margin-left:12%;
+}
+.search{
+	height: 40px;
+	width:100%;
+	background-color:white;
+	margin-top:32px;
+	font-size:24px;
+}
+#loginBox{
+	margin-left:13%;
+}
+.login{
+	width:200px;
+	height:150px;
+	float:right;
+}
+.menybox {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+	width:100%;
+	top:0px;
+	left: 0px;
+	
+}
+#menybutton{
+    float: left;
+}
+#menybutton a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#menybutton a:hover {
+    background-color: #111;
+}
+footer{
+	
+	height:80px;
+	width:100%;
+	background-color:#333;
+	bottom:0px;
+	left: 0px;
+	color: white;
+}
+#footerbox{
+	margin: 5px 0px 5px 10px;
+	width:300px;
+	float:left;
+}
+.imgBoxIndex{
+height:400px;
+width:100%;
+
+}
+#imgBox{
+	height:100%;
+	width:20%;
+	margin-left:3%;
+	float:left;
+	margin-top:5px;
+	border:solid black;
+}
+
+#imgTextBox{
+	height:200px;
+	
+}
+#imgTextBox a{
+	list-style-type: none;
+	text-decoration: none;
+	font-size:20px;
+}
+#imgTextTextBox{
+	margin-left:40%;
+	
+}
+
+/* Styles go here */
+.new_games table{
+  float:left;
+  margin: 0 auto;
+}
+h1{
+  text-align: center;
+}
+.new_games table{
+  float:right;
+  padding-right: 10%;
+}
+.coming_games table{
+  float:right;
+  padding-right: 10%;
+	padding-bottom: 20px;
+}
+.category_games img{
+  border:1px solid #021a40;
+  margin:0 auto;
+}
+.category_games h3{
+  float: left; 
+  
+  text-align: center; 
+  width: 30%; 
+  margin-right: 3%; 
+  margin-bottom: 0.5em;
+}
+.category_games{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.highlights img{
+  margin:0 auto;
+  width:100%;
+  
+}
+.highlights ul{
+  list-style-type:none;
+  overflow:hidden;
+}
+.highlights li{
+  float:left;
+  margin-bottom:10px;
+  margin-left:10px;
+}
+
+.highlights a{
+  text-align: center; 
+}
+.highlights{
+  margin: 0 auto;
+  
+}
+
+@media (max-width: 800px)
+{
+  .highlights li{
+    float:none;
+  }
+  .highlights img{
+    width:50%;
+  }
+  
+  
