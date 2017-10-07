@@ -104,6 +104,37 @@ width:100%;
 h1{
   text-align: center;
 }
+
+.CartContent{
+	width: 50%;
+	margin: 0 auto;
+}
+.CartContent h2,p,img{
+	
+	text-align: center;
+	margin: auto 0;
+}
+.inCart_img{
+	float:left;
+	border:1px solid #021a40;
+	margin: auto 0;
+	
+}
+.shopping-cart {
+  width: 750px;
+  height: 423px;
+  margin: 80px auto;
+  background: #FFFFFF;
+  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+  border-radius: 6px;
+ 
+  display: flex;
+  flex-direction: column;
+}
+.inCartLike_img{
+	float:left;
+	border:1px solid #021a40;
+}
 .new_games table{
   float:right;
   padding-right: 10%;
@@ -119,7 +150,6 @@ h1{
 }
 .category_games h3{
   float: left; 
-  
   text-align: center; 
   width: 30%; 
   margin-right: 3%; 
@@ -210,6 +240,7 @@ h1{
 }
 
 
+	
 .prize {
 
 	margin-left: 50px;
@@ -241,3 +272,5 @@ h1{
 
 }
 
+.Incartimg {
+}
