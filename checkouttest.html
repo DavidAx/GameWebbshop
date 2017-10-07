@@ -1,0 +1,40 @@
+<!DOCTYPE.html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="checkouttestscript.js"></script>
+    <link  type="stylesheet"href="style.css">
+</head>
+<body onload="checkout()">
+    <h1>Checkout test</h1>
+    <ul>
+        <div id="game1">
+            <il>
+            <p class="id">game1</p>
+            <p class="price">0</p>
+            <p class="amount">0</p>
+            <button onclick="checkout_addItem(1)">add</button>
+            <button onclick="checkout_removeItem(1)">remove</button>
+            </il>
+        </div>
+        <div id="game2">
+            <il>
+                <p class="id">game2</p>
+                <p class="price">0</p>
+                <p class="amount">0</p>
+                <button onclick="checkout_addItem(2)">add</button>
+                <button onclick="checkout_removeItem(2)">remove</button>
+            </il>
+        </div>
+        <div id="game3">
+            <il>
+                <p class="id">game3</p>
+                <p class="price">0</p>
+                <p class="amount">0</p>
+                <button onclick="checkout_addItem(3)">add</button>
+                <button onclick="checkout_removeItem(3)">remove</button>
+            </il>
+        </div>
+    </ul>
+</body>
+</html>
