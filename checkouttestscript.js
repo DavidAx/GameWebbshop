@@ -1,15 +1,25 @@
 
 
 //item object
-function item(id, price, amount)
+function item(id, amount)
 {
     this.id=id;
-    this.price=price;
+    this.price=games[id-1].price;
+    this.name=games[id-1].name;
     this.amount=amount;
 }
 
 //list for items (the shoppingcart)
 var items=new Array();
+
+
+//temporary array of avaible items
+var game1={price:200,name:"Broccoli"};
+var game2={price:499,name:"Dragoon"};
+var game3={price:150,name:"Molten Core"};
+var games=[game1,game2,game3];
+
+
 
 //add item to list (shoppingcart)
 function addItem(id)
@@ -18,7 +28,6 @@ function addItem(id)
     var i=0;
     while(i<items.length&&found==false)
     {
-        console.log(i);
         if(items[i]!=undefined&&items[i].id==id)
         {
             items[i].amount++;
@@ -28,10 +37,9 @@ function addItem(id)
     }
     if(!found)
     {
-        items.push(new item(id,200,1)) 
+        items.push(new item(id,1)) 
     }
     saveItems();
-    console.log(items);
 }
 
 //saves the list(shoppingcart) to localstorage
@@ -49,47 +57,49 @@ function loadItems()
 function checkout()
 {
     loadItems();
-    console.log(items);
+    hideAll();
     for(var i=0;i<items.length;i++)
     {
         if(items[i]!=undefined)
         {   
+            showElement(items[i].id);
+            var elementselect_id = document.querySelectorAll("div#game"+items[i].id+" p.id");
             var elementselect_price = document.querySelectorAll("div#game"+items[i].id+" p.price");
             var elementselect_amount = document.querySelectorAll("div#game"+items[i].id+" p.amount");
+            $(elementselect_id).text(items[i].name);
             $(elementselect_price).text(items[i].price);
             $(elementselect_amount).text(items[i].amount);
             
         }
     }
+    sumPrice();
 }
 //checkout-page functions
 function checkout_addItem(id)
 {
-    console.log(id);
     var pos=findPos(id);
     items[pos].amount++;
     var elementselect_amount = document.querySelectorAll("div#game"+items[pos].id+" p.amount");
     $(elementselect_amount).text(items[pos].amount);
+    sumPrice();
 }
 
 function checkout_removeItem(id)
 {
-    console.log(id);
     var pos=findPos(id);
     items[pos].amount--;
     var elementselect_amount = document.querySelectorAll("div#game"+items[pos].id+" p.amount");
     $(elementselect_amount).text(items[pos].amount);
     if(items[pos].amount==0)
     {
-        console.log(items[id-1]);
-        var elementselect=document.querySelectorAll("div#game"+items[pos].id);
+        hideElement(items[pos].id);
         items.splice(pos,1);
-        console.log(elementselect);
-        $(elementselect).hide();
     }
+    sumPrice();
     
 }
 
+//search function
 function findPos(id)
 {
     var found=false;
@@ -109,3 +119,34 @@ function findPos(id)
     return i;
 
 }
+
+//item "hider"
+function hideElement(id)
+{
+    var elementselect=document.querySelectorAll("div#game"+id);
+    $(elementselect).hide();
+}
+
+function hideAll()
+{
+    $("div").hide();
+}
+
+function showElement(id)
+{
+    var elementselect=document.querySelectorAll("div#game"+id);
+    $(elementselect).show();
+}
+
+//summerises the price
+function sumPrice()
+{
+    var sum=0;
+    for(var i=0;i<items.length;i++)
+    {
+        sum+=items[i].price*items[i].amount;
+    }
+    $("p#summary").text(sum);
+}
+
+
