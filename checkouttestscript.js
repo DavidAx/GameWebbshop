@@ -57,12 +57,13 @@ function loadItems()
 function checkout()
 {
     loadItems();
-    hideAll();
+    //hideAll();
     for(var i=0;i<items.length;i++)
     {
         if(items[i]!=undefined)
         {   
-            showElement(items[i].id);
+            //showElement(items[i].id);
+            addElement(items[i].id);
             var elementselect_id = document.querySelectorAll("div#game"+items[i].id+" p.id");
             var elementselect_price = document.querySelectorAll("div#game"+items[i].id+" p.price");
             var elementselect_amount = document.querySelectorAll("div#game"+items[i].id+" p.amount");
@@ -92,7 +93,8 @@ function checkout_removeItem(id)
     $(elementselect_amount).text(items[pos].amount);
     if(items[pos].amount==0)
     {
-        hideElement(items[pos].id);
+        //hideElement(items[pos].id);
+        removeElement(items[pos].id);
         items.splice(pos,1);
     }
     sumPrice();
@@ -136,6 +138,28 @@ function showElement(id)
 {
     var elementselect=document.querySelectorAll("div#game"+id);
     $(elementselect).show();
+}
+
+function addElement(id)
+{
+    var element="<div id='game"+id+"'>";
+    element+="<il>";
+    element+="<p class='id'>game"+id+"</p>";
+    element+="<p class='price'>0</p>";
+    element+="<p class='amount'>0</p>";
+    element+="<button onclick='checkout_addItem("+id+")'>add</button>";
+    element+="<button onclick='checkout_removeItem("+id+")'>remove</button>";
+    element+="</il>";
+    element+="</div";
+    $("ul#item_list").after(element);
+
+}
+
+function removeElement(id)
+{
+    var elementselect=document.querySelectorAll("div#game"+id);
+    $(elementselect).empty();
+    $(elementselect).remove();
 }
 
 //summerises the price
