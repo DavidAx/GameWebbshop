@@ -123,6 +123,7 @@ function findPos(id)
 }
 
 //item "hider"
+/*
 function hideElement(id)
 {
     var elementselect=document.querySelectorAll("div#game"+id);
@@ -139,6 +140,7 @@ function showElement(id)
     var elementselect=document.querySelectorAll("div#game"+id);
     $(elementselect).show();
 }
+*/
 
 function addElement(id)
 {
