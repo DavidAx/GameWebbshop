@@ -57,7 +57,6 @@ function loadItems()
 function checkout()
 {
     loadItems();
-    //hideAll();
     for(var i=0;i<items.length;i++)
     {
         if(items[i]!=undefined)
@@ -83,6 +82,7 @@ function checkout_addItem(id)
     var elementselect_amount = document.querySelectorAll("div#game"+items[pos].id+" p.amount");
     $(elementselect_amount).text(items[pos].amount);
     sumPrice();
+    saveItems();
 }
 
 function checkout_removeItem(id)
@@ -93,11 +93,11 @@ function checkout_removeItem(id)
     $(elementselect_amount).text(items[pos].amount);
     if(items[pos].amount==0)
     {
-        //hideElement(items[pos].id);
         removeElement(items[pos].id);
         items.splice(pos,1);
     }
     sumPrice();
+    saveItems();
     
 }
 
@@ -122,29 +122,10 @@ function findPos(id)
 
 }
 
-//item "hider"
-/*
-function hideElement(id)
-{
-    var elementselect=document.querySelectorAll("div#game"+id);
-    $(elementselect).hide();
-}
-
-function hideAll()
-{
-    $("div").hide();
-}
-
-function showElement(id)
-{
-    var elementselect=document.querySelectorAll("div#game"+id);
-    $(elementselect).show();
-}
-*/
-
+//creates element for item
 function addElement(id)
 {
-    var element="<div id='game"+id+"'>";
+    var element="<div id='game"+id+"' class='game'>";
     element+="<il>";
     element+="<p class='id'>game"+id+"</p>";
     element+="<p class='price'>0</p>";
@@ -154,14 +135,20 @@ function addElement(id)
     element+="</il>";
     element+="</div";
     $("ul#item_list").after(element);
+    
+
 
 }
 
+//removes element of a item
 function removeElement(id)
 {
     var elementselect=document.querySelectorAll("div#game"+id);
-    $(elementselect).empty();
-    $(elementselect).remove();
+    $(elementselect).animate({
+        right:"100%"
+    },function(){
+        $(elementselect).remove();
+    });
 }
 
 //summerises the price
