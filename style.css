@@ -99,8 +99,16 @@ width:100%;
 /* Styles go here */
 .new_games table{
   float:left;
-  margin: 0 auto;
+  margin-right: 20%;
+  margin-left: 25%;
 }
+
+.coming_games table{
+  float:;
+  margin-left: 20%;
+  margin right: 25%;
+}
+
 h1{
   text-align: center;
 }
@@ -135,15 +143,8 @@ h1{
 	float:left;
 	border:1px solid #021a40;
 }
-.new_games table{
-  float:right;
-  padding-right: 10%;
-}
-.coming_games table{
-  float:right;
-  padding-right: 10%;
-	padding-bottom: 20px;
-}
+
+
 .category_games img{
   border:1px solid #021a40;
   margin:0 auto;
