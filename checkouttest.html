@@ -5,13 +5,14 @@
     <script src="checkouttestscript.js"></script>
     <link  rel="stylesheet" type="text/css" href="teststyle.css">
 	<link rel="stylesheet" href="style.css">
+	<meta charset="utf-8">
     
 </head>
 <body onload="checkout()">
 <div class="topside"> 
 		<!--hej -->
 		<div  class="topsideBox">
-		<a href="index.html"><img src="bilder/logo.png" height="120px" width="130px"> </a>
+			<a href="index.html"><img src="bilder/logo.png" height="120px" width="130px"> </a>
 		</div>
 		
 		<div id="searchBox" class="topsideBox">
@@ -39,7 +40,7 @@
   <li style="float:right;" > <a href="addItemstest.html"> <img  src="bilder/kassa.png"> </a> </li>
 </ul>
 
-    <h1>Checkout test</h1>
+  <h1>Checkout test</h1>
     <ul id="item_list">
         <!-- example of how script will setup the list of items
         <div id="game1">
@@ -74,33 +75,33 @@
     <p id="summary">0</p>
 	<form  id="DhlForm" method="post" action="#">
 		
-		<label for="slider-1">Längd:</label>
+		<label for="slider-1">Length:</label>
 		<input type="range" name="slider-1" id="slider-1" value="0" min="0" max="100" data-highlight="true" onchange="calc(this.value)"/>
 
-		<label for="slider-2">Bredd:</label>
+		<label for="slider-2">Width:</label>
 		<input type="range" name="slider-2" id="slider-2" value="0" min="0" max="100" data-highlight="true" onchange="calc(this.value)"/>
 
-		<label for="slider-3">Höjd:</label>
+		<label for="slider-3">Height:</label>
 		<input type="range" name="slider-3" id="slider-3" value="0" min="0" max="100" data-highlight="true" onchange="calc(this.value)"/>
 
-		<label for="slider-4">Vikt:</label>
+		<label for="slider-4">Weight:</label>
 		<input type="range" name="slider-4" id="slider-4" value="0" min="0" max="100" data-highlight="true" onchange="calc(this.value)"/>
 
-    	<label for="total">Pris:</label>
+    	<label for="total">Price:</label>
     	<input type="text" name="count" id="count" value=""  />
 	
 	</form>
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-	<footer>
+<footer>
 	<div id="footerbox">
 	   <hr> Grupp 2
  	   <br> Collegium, Mjärdevi, Linköping
   	   <br> 8822-46465050 
 	</div>
 	
-	</footer>
+</footer>
 	
 </body>
 <script type="text/javascript">
