@@ -114,15 +114,15 @@ Let’s add some basic style to  product name and description.
 }
  
 button[class*=btn] {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   background-color: #E1E8EE;
   border-radius: 6px;
   border: none;
   cursor: pointer;
 }
 .minus-btn img {
-  margin-bottom: 3px;
+  margin-bottom: 1px;
 }
 .plus-btn img {
   margin-top: 2px;

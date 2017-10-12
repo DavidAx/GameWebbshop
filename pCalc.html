@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styleform.css">
+	<title></title>
+</head>
+<body>
+	
+	<form  id="DhlForm" method="post" action="#">
+		
+		<label for="slider-1">Längd:</label>
+		<input type="range" name="slider-1" id="slider-1" value="0" min="0" max="100" data-highlight="true" onchange="calc(this.value)"/>
+
+		<label for="slider-2">Bredd:</label>
+		<input type="range" name="slider-2" id="slider-2" value="0" min="0" max="100" data-highlight="true" onchange="calc(this.value)"/>
+
+		<label for="slider-3">Höjd:</label>
+		<input type="range" name="slider-3" id="slider-3" value="0" min="0" max="100" data-highlight="true" onchange="calc(this.value)"/>
+
+		<label for="slider-4">Vikt:</label>
+		<input type="range" name="slider-4" id="slider-4" value="0" min="0" max="100" data-highlight="true" onchange="calc(this.value)"/>
+
+    	<label for="total">Pris:</label>
+    	<input type="text" name="count" id="count" value=""  />
+	
+	</form>
+
+</body>
+	
+	<script type="text/javascript">
+		function calc() {
+			
+			var langd = $("#slider-1").val();
+			var bredd = $("#slider-2").val();
+			var hojd = $("#slider-3").val();
+			var vikt = $("#slider-4").val();
+			var total = parseInt(langd) + parseInt(bredd) + parseInt(hojd) + parseInt(vikt)/8;
+
+			$("#count").val(total);
+		};
+
+	</script>
+</html>
